@@ -1,1 +1,33 @@
 // Mixins Here
+.mobile-width(){
+    @media @phone{
+        width: 100%;
+    }
+}
+
+.centered-text(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-style(@color, @bg, @rad: 10px){
+    color: @color;
+    background-color: @bg;
+    text-decoration: none;
+    border-radius: @rad;
+    border: 1px solid @header-font-color;
+    width: max-content;
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+    animation-name: btn-pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    text-align: center;
+    padding: 10px 20px;
+    &:hover{
+        color: @bg;
+        background-color: @color;
+    }
+    .mobile-width();
+}
