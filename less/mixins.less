@@ -1,1 +1,29 @@
 // Mixins Here
+.mobile-width(){
+    @media @phone{
+        width: 100%;
+    }
+}
+
+.centered-text(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-style(@color, @bg, @rad: 10px){
+    color: @color;
+    background-color: @bg;
+    text-decoration: none;
+    border-radius: @rad;
+    border: 1px solid @header-font-color;
+    width: max-content;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    text-align: center;
+    &:hover{
+        color: @bg;
+        background-color: @color;
+    }
+}
