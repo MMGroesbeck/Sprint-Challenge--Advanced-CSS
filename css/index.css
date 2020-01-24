@@ -1,3 +1,20 @@
+@keyframes btn-pulse {
+  0% {
+    border: 1px solid red;
+  }
+  25% {
+    border: 1px solid white;
+  }
+  50% {
+    border: 1px solid #23293B;
+  }
+  75% {
+    border: 1px solid white;
+  }
+  100% {
+    border: 1px solid red;
+  }
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -164,12 +181,19 @@ p {
   margin: 0 auto;
 }
 nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column nowrap;
   color: #23293B;
-  background-color: #F6F6F6;
+  background-color: rgba(246, 246, 246, 0.5);
+}
+nav:hover {
+  opacity: 1;
 }
 nav .navbar {
   width: 400px;
@@ -185,7 +209,7 @@ nav .navbar a {
   color: #23293B;
 }
 nav .navbar a:hover {
-  color: footer-font-color;
+  color: #81848E;
 }
 footer {
   color: #22283B;
@@ -272,10 +296,13 @@ footer {
   border-radius: 10px;
   border: 1px solid #23293B;
   width: max-content;
-  padding: 15px 20px;
   margin-bottom: 10px;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  animation-name: btn-pulse;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
   text-align: center;
+  padding: 10px 20px;
 }
 .home .walk .walk-text .btn:hover {
   color: #22283A;

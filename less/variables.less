@@ -25,3 +25,22 @@
 
 // Mobile var
 @phone: ~"(max-width: 500px)";
+
+// Animation
+@keyframes btn-pulse {
+    0% {
+        border: 1px solid red;
+    }
+    25% {
+        border: 1px solid white;
+    }
+    50% {
+        border: 1px solid @header-font-color;
+    }
+    75% {
+        border: 1px solid white;
+    }
+    100% {
+        border: 1px solid red;
+    }
+}
