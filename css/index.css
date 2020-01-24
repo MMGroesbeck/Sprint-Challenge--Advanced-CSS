@@ -281,6 +281,11 @@ footer {
   color: #22283A;
   background-color: #F6F7F8;
 }
+@media (max-width: 500px) {
+  .home .walk .walk-text .btn {
+    width: 100%;
+  }
+}
 .home .walk .walk-img {
   width: 46%;
   margin-left: 4%;
